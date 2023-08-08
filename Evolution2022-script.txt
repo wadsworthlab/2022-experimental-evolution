@@ -1,0 +1,562 @@
+#############################################
+#Experimental evolution Genomics 2022
+#
+#############################################
+
+#Trim poor quality reads: Trimmomatic
+#Local
+
+#!/bin/bash
+for i in $(ls *_001.fastq.gz | rev | cut -c 16- | rev | uniq)
+do
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 /Users/cbwsbi/Desktop/reads/${i}R1_001.fastq.gz /Users/cbwsbi/Desktop/reads/${i}R2_001.fastq.gz /Users/cbwsbi/Desktop/reads/${i}R1-trimmed.fastq.gz /Users/cbwsbi/Desktop/reads/${i}R1-unpaired.fastq.gz /Users/cbwsbi/Desktop/reads/${i}R2-trimmed.fastq.gz /Users/cbwsbi/Desktop/reads/${i}R2-unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3
+done
+
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 0944-C1_S18_L001_R1_001.fastq.gz 0944-C1_S18_L001_R2_001.fastq.gz 0944-C1_S18_L001_R1-trimmed.fastq.gz 0944-C1_S18_L001_R1-unpaired.fastq.gz 0944-C1_S18_L001_R2-trimmed.fastq.gz 0944-C1_S18_L001_R2unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 0944-C2_S19_L001_R1_001.fastq.gz 0944-C2_S19_L001_R2_001.fastq.gz 0944-C2_S19_L001_R1-trimmed.fastq.gz 0944-C2_S19_L001_R1-unpaired.fastq.gz 0944-C2_S19_L001_R2-trimmed.fastq.gz 0944-C2_S19_L001_R2unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 0944-C3_S20_L001_R1_001.fastq.gz 0944-C3_S20_L001_R2_001.fastq.gz 0944-C3_S20_L001_R1-trimmed.fastq.gz 0944-C3_S20_L001_R1-unpaired.fastq.gz 0944-C3_S20_L001_R2-trimmed.fastq.gz 0944-C3_S20_L001_R2unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 0944-PEN-A_S14_L001_R1_001.fastq.gz 0944-PEN-A_S14_L001_R2_001.fastq.gz 0944-PEN-A_S14_L001_R1-trimmed.fastq.gz 0944-PEN-A_S14_L001_R1-unpaired.fastq.gz 0944-PEN-A_S14_L001_R2-trimmed.fastq.gz 0944-PEN-A_S14_L001_R2unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 0944-PEN-B_S15_L001_R1_001.fastq.gz 0944-PEN-B_S15_L001_R2_001.fastq.gz 0944-PEN-B_S15_L001_R1-trimmed.fastq.gz 0944-PEN-B_S15_L001_R1-unpaired.fastq.gz 0944-PEN-B_S15_L001_R2-trimmed.fastq.gz 0944-PEN-B_S15_L001_R2unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:31
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 0944-PEN-C_S16_L001_R1_001.fastq.gz 0944-PEN-C_S16_L001_R2_001.fastq.gz 0944-PEN-C_S16_L001_R1-trimmed.fastq.gz 0944-PEN-C_S16_L001_R1-unpaired.fastq.gz 0944-PEN-C_S16_L001_R2-trimmed.fastq.gz 0944-PEN-C_S16_L001_R2unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 0944-PEN-D_S17_L001_R1_001.fastq.gz 0944-PEN-D_S17_L001_R2_001.fastq.gz 0944-PEN-D_S17_L001_R1-trimmed.fastq.gz 0944-PEN-D_S17_L001_R1-unpaired.fastq.gz 0944-PEN-D_S17_L001_R2-trimmed.fastq.gz 0944-PEN-D_S17_L001_R2unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 0945-AZI-B_S18_L001_R1_001.fastq.gz 0945-AZI-B_S18_L001_R2_001.fastq.gz 0945-AZI-B_S18_L001_R1-trimmed.fastq.gz 0945-AZI-B_S18_L001_R1-unpaired.fastq.gz 0945-AZI-B_S18_L001_R2-trimmed.fastq.gz 0945-AZI-B_S18_L001_R2unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 0945-AZI-C_S19_L001_R1_001.fastq.gz 0945-AZI-C_S19_L001_R2_001.fastq.gz 0945-AZI-C_S19_L001_R1-trimmed.fastq.gz 0945-AZI-C_S19_L001_R1-unpaired.fastq.gz 0945-AZI-C_S19_L001_R2-trimmed.fastq.gz 0945-AZI-C_S19_L001_R2unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 0945-AZI-D_S20_L001_R1_001.fastq.gz 0945-AZI-D_S20_L001_R2_001.fastq.gz 0945-AZI-D_S20_L001_R1-trimmed.fastq.gz 0945-AZI-D_S20_L001_R1-unpaired.fastq.gz 0945-AZI-D_S20_L001_R2-trimmed.fastq.gz 0945-AZI-D_S20_L001_R2unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 0945-C1_S15_L001_R1_001.fastq.gz 0945-C1_S15_L001_R2_001.fastq.gz 0945-C1_S15_L001_R1-trimmed.fastq.gz 0945-C1_S15_L001_R1-unpaired.fastq.gz 0945-C1_S15_L001_R2-trimmed.fastq.gz 0945-C1_S15_L001_R2unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 0945-C2_S16_L001_R1_001.fastq.gz 0945-C2_S16_L001_R2_001.fastq.gz 0945-C2_S16_L001_R1-trimmed.fastq.gz 0945-C2_S16_L001_R1-unpaired.fastq.gz 0945-C2_S16_L001_R2-trimmed.fastq.gz 0945-C2_S16_L001_R2unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 0945-C3_S17_L001_R1_001.fastq.gz 0945-C3_S17_L001_R2_001.fastq.gz 0945-C3_S17_L001_R1-trimmed.fastq.gz 0945-C3_S17_L001_R1-unpaired.fastq.gz 0945-C3_S17_L001_R2-trimmed.fastq.gz 0945-C3_S17_L001_R2unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 0948-AZI-A_S10_L001_R1_001.fastq.gz 0948-AZI-A_S10_L001_R2_001.fastq.gz 0948-AZI-A_S10_L001_R1-trimmed.fastq.gz 0948-AZI-A_S10_L001_R1-unpaired.fastq.gz 0948-AZI-A_S10_L001_R2-trimmed.fastq.gz 0948-AZI-A_S10_L001_R2unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 0948-AZI-B_S11_L001_R1_001.fastq.gz 0948-AZI-B_S11_L001_R2_001.fastq.gz 0948-AZI-B_S11_L001_R1-trimmed.fastq.gz 0948-AZI-B_S11_L001_R1-unpaired.fastq.gz 0948-AZI-B_S11_L001_R2-trimmed.fastq.gz 0948-AZI-B_S11_L001_R2unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 0948-AZI-C_S12_L001_R1_001.fastq.gz 0948-AZI-C_S12_L001_R2_001.fastq.gz 0948-AZI-C_S12_L001_R1-trimmed.fastq.gz 0948-AZI-C_S12_L001_R1-unpaired.fastq.gz 0948-AZI-C_S12_L001_R2-trimmed.fastq.gz 0948-AZI-C_S12_L001_R2unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 0948-AZI-D_S13_L001_R1_001.fastq.gz 0948-AZI-D_S13_L001_R2_001.fastq.gz 0948-AZI-D_S13_L001_R1-trimmed.fastq.gz 0948-AZI-D_S13_L001_R1-unpaired.fastq.gz 0948-AZI-D_S13_L001_R2-trimmed.fastq.gz 0948-AZI-D_S13_L001_R2unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 0948-C1_S1_L001_R1_001.fastq.gz 0948-C1_S1_L001_R2_001.fastq.gz 0948-C1_S1_L001_R1-trimmed.fastq.gz 0948-C1_S1_L001_R1-unpaired.fastq.gz 0948-C1_S1_L001_R2-trimmed.fastq.gz 0948-C1_S1_L001_R2unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 0948-C2_S2_L001_R1_001.fastq.gz 0948-C2_S2_L001_R2_001.fastq.gz 0948-C2_S2_L001_R1-trimmed.fastq.gz 0948-C2_S2_L001_R1-unpaired.fastq.gz 0948-C2_S2_L001_R2-trimmed.fastq.gz 0948-C2_S2_L001_R2unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 0948-C3_S3_L001_R1_001.fastq.gz 0948-C3_S3_L001_R2_001.fastq.gz 0948-C3_S3_L001_R1-trimmed.fastq.gz 0948-C3_S3_L001_R1-unpaired.fastq.gz 0948-C3_S3_L001_R2-trimmed.fastq.gz 0948-C3_S3_L001_R2unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 0957-C1_S4_L001_R1_001.fastq.gz 0957-C1_S4_L001_R2_001.fastq.gz 0957-C1_S4_L001_R1-trimmed.fastq.gz 0957-C1_S4_L001_R1-unpaired.fastq.gz 0957-C1_S4_L001_R2-trimmed.fastq.gz 0957-C1_S4_L001_R2unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 0957-C2_S5_L001_R1_001.fastq.gz 0957-C2_S5_L001_R2_001.fastq.gz 0957-C2_S5_L001_R1-trimmed.fastq.gz 0957-C2_S5_L001_R1-unpaired.fastq.gz 0957-C2_S5_L001_R2-trimmed.fastq.gz 0957-C2_S5_L001_R2unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 0957-C3_S6_L001_R1_001.fastq.gz 0957-C3_S6_L001_R2_001.fastq.gz 0957-C3_S6_L001_R1-trimmed.fastq.gz 0957-C3_S6_L001_R1-unpaired.fastq.gz 0957-C3_S6_L001_R2-trimmed.fastq.gz 0957-C3_S6_L001_R2unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 953-C1_S7_L001_R1_001.fastq.gz 953-C1_S7_L001_R2_001.fastq.gz 953-C1_S7_L001_R1-trimmed.fastq.gz 953-C1_S7_L001_R1-unpaired.fastq.gz 953-C1_S7_L001_R2-trimmed.fastq.gz 953-C1_S7_L001_R2unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 953-C2_S8_L001_R1_001.fastq.gz 953-C2_S8_L001_R2_001.fastq.gz 953-C2_S8_L001_R1-trimmed.fastq.gz 953-C2_S8_L001_R1-unpaired.fastq.gz 953-C2_S8_L001_R2-trimmed.fastq.gz 953-C2_S8_L001_R2unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3
+java -classpath /Users/cbwsbi/Desktop/software/Trimmomatic-0.39/trimmomatic-0.39.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 953-C3_S9_L001_R1_001.fastq.gz 953-C3_S9_L001_R2_001.fastq.gz 953-C3_S9_L001_R1-trimmed.fastq.gz 953-C3_S9_L001_R1-unpaired.fastq.gz 953-C3_S9_L001_R2-trimmed.fastq.gz 953-C3_S9_L001_R2unpaired.fastq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3
+
+#############################################
+#Reference alignment
+#ssh cbwsbi@sporcsubmit.rc.rit.edu
+#/home/cbwsbi/2022-experimental-evolution
+
+#G1 = AR0953
+#G2 = AR0944
+#G3 = AR0957
+#G4 = AR0948
+#G5 = AR0945
+
+module load bowtie/2.2.9
+
+bowtie2-build AR-0945.fasta AR0945_Index
+bowtie2-build AR-0948.fasta AR0948_Index
+bowtie2-build AR-0953.fasta AR0953_Index
+bowtie2-build AR-0957.fasta AR0957_Index
+bowtie2-build AR-0944.fasta AR0944_Index
+
+#!/bin/bash
+for i in $(ls G1* | rev | cut -c 21- | rev | uniq)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="bowtie2 --end-to-end --very-sensitive -x AR0953_Index -1 ${i}_R1-trimmed.fastq.gz -2 ${i}_R2-trimmed.fastq.gz -S ${i}sam.sam"
+done
+for i in $(ls G3* | rev | cut -c 21- | rev | uniq)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="bowtie2 --end-to-end --very-sensitive -x AR0957_Index -1 ${i}_R1-trimmed.fastq.gz -2 ${i}_R2-trimmed.fastq.gz -S ${i}sam.sam"
+done
+for i in $(ls G4* | rev | cut -c 21- | rev | uniq)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="bowtie2 --end-to-end --very-sensitive -x AR0948_Index -1 ${i}_R1-trimmed.fastq.gz -2 ${i}_R2-trimmed.fastq.gz -S ${i}sam.sam"
+done
+for i in $(ls G5* | rev | cut -c 21- | rev | uniq)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="bowtie2 --end-to-end --very-sensitive -x AR0945_Index -1 ${i}_R1-trimmed.fastq.gz -2 ${i}_R2-trimmed.fastq.gz -S ${i}sam.sam"
+done
+
+
+#!/bin/bash
+for i in $(ls 953*.fastq.gz | rev | cut -c 21- | rev | uniq)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="bowtie2 --end-to-end --very-sensitive -x AR0953_Index -1 ${i}_R1-trimmed.fastq.gz -2 ${i}_R2-trimmed.fastq.gz -S ${i}sam.sam"
+done
+for i in $(ls 0944*.fastq.gz | rev | cut -c 21- | rev | uniq)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="bowtie2 --end-to-end --very-sensitive -x AR0944_Index -1 ${i}_R1-trimmed.fastq.gz -2 ${i}_R2-trimmed.fastq.gz -S ${i}sam.sam"
+done
+for i in $(ls 0957*.fastq.gz | rev | cut -c 21- | rev | uniq)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="bowtie2 --end-to-end --very-sensitive -x AR0957_Index -1 ${i}_R1-trimmed.fastq.gz -2 ${i}_R2-trimmed.fastq.gz -S ${i}sam.sam"
+done
+for i in $(ls 0948*.fastq.gz | rev | cut -c 21- | rev | uniq)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="bowtie2 --end-to-end --very-sensitive -x AR0948_Index -1 ${i}_R1-trimmed.fastq.gz -2 ${i}_R2-trimmed.fastq.gz -S ${i}sam.sam"
+done
+for i in $(ls 0945*.fastq.gz | rev | cut -c 21- | rev | uniq)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="bowtie2 --end-to-end --very-sensitive -x AR0945_Index -1 ${i}_R1-trimmed.fastq.gz -2 ${i}_R2-trimmed.fastq.gz -S ${i}sam.sam"
+done
+
+
+#!/bin/bash
+for i in $(ls G2* | rev | cut -c 21- | rev | uniq)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="bowtie2 --end-to-end --very-sensitive -x AR0944_Index -1 ${i}_R1-trimmed.fastq.gz -2 ${i}_R2-trimmed.fastq.gz -S ${i}sam.sam"
+done
+
+module load samtools/1.10-gcc-9.3.0-ecml3ml5
+
+
+#!/bin/bash
+for i in $(ls G2*.sam | rev | cut -c 8- | rev | uniq)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="samtools view -bS -o ${i}.bam ${i}sam.sam"
+done
+
+#!/bin/bash
+for i in $(ls 09*.sam | rev | cut -c 8- | rev | uniq)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="samtools view -bS -o ${i}.bam ${i}sam.sam"
+done
+for i in $(ls 953*.sam | rev | cut -c 8- | rev | uniq)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="samtools view -bS -o ${i}.bam ${i}sam.sam"
+done
+
+#!/bin/bash
+for i in $(ls G2*.bam | rev | cut -c 5- | rev | uniq)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="samtools sort -o ${i}-sorted.bam ${i}.bam"
+done
+
+#!/bin/bash
+for i in $(ls 09*.bam | rev | cut -c 5- | rev | uniq)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="samtools sort -o ${i}-sorted.bam ${i}.bam"
+done
+for i in $(ls 953*.bam| rev | cut -c 5- | rev | uniq)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="samtools sort -o ${i}-sorted.bam ${i}.bam"
+done
+
+#!/bin/bash
+for i in $(ls *-sorted.bam)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="samtools index ${i}"
+done
+
+
+#!/bin/bash
+for i in $(ls G2*-sorted.bam | rev | cut -c 12- | rev | uniq)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="java -Xmx16G -jar /home/cbwsbi/software/pilon-1.24.jar --genome AR-0944.fasta --frags ${i}-sorted.bam --output ${i} --vcf --tracks --minqual 15"
+done
+
+
+#!/bin/bash
+for i in $(ls G1*-sorted.bam | rev | cut -c 12- | rev | uniq)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="java -Xmx16G -jar /home/cbwsbi/software/pilon-1.24.jar --genome AR-0953.fasta --frags ${i}-sorted.bam --output ${i} --vcf --tracks --minqual 15"
+done
+for i in $(ls G3*-sorted.bam | rev | cut -c 12- | rev | uniq)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="java -Xmx16G -jar /home/cbwsbi/software/pilon-1.24.jar --genome AR-0957.fasta --frags ${i}-sorted.bam --output ${i} --vcf --tracks --minqual 15"
+done
+for i in $(ls G4*-sorted.bam | rev | cut -c 12- | rev | uniq)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="java -Xmx16G -jar /home/cbwsbi/software/pilon-1.24.jar --genome AR-0948.fasta --frags ${i}-sorted.bam --output ${i} --vcf --tracks --minqual 15"
+done
+for i in $(ls G5*-sorted.bam | rev | cut -c 12- | rev | uniq)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="java -Xmx16G -jar /home/cbwsbi/software/pilon-1.24.jar --genome AR-0945.fasta --frags ${i}-sorted.bam --output ${i} --vcf --tracks --minqual 15"
+done
+
+#!/bin/bash
+for i in $(ls 953*-sorted.bam | rev | cut -c 12- | rev | uniq)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="java -Xmx16G -jar /home/cbwsbi/software/pilon-1.24.jar --genome AR-0953.fasta --frags ${i}-sorted.bam --output ${i} --vcf --tracks --minqual 15"
+done
+for i in $(ls 0944*-sorted.bam | rev | cut -c 12- | rev | uniq)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="java -Xmx16G -jar /home/cbwsbi/software/pilon-1.24.jar --genome AR-0944.fasta --frags ${i}-sorted.bam --output ${i} --vcf --tracks --minqual 15"
+done
+for i in $(ls 0945*-sorted.bam | rev | cut -c 12- | rev | uniq)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="java -Xmx16G -jar /home/cbwsbi/software/pilon-1.24.jar --genome AR-0945.fasta --frags ${i}-sorted.bam --output ${i} --vcf --tracks --minqual 15"
+done
+for i in $(ls 0948*-sorted.bam | rev | cut -c 12- | rev | uniq)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="java -Xmx16G -jar /home/cbwsbi/software/pilon-1.24.jar --genome AR-0948.fasta --frags ${i}-sorted.bam --output ${i} --vcf --tracks --minqual 15"
+done
+for i in $(ls 0957*-sorted.bam | rev | cut -c 12- | rev | uniq)
+do
+sbatch -p tier3 -c 4 -t 0-12:00:00 --mem-per-cpu=5G --wrap="java -Xmx16G -jar /home/cbwsbi/software/pilon-1.24.jar --genome AR-0957.fasta --frags ${i}-sorted.bam --output ${i} --vcf --tracks --minqual 15"
+done
+
+
+#!/bin/bash
+for i in $(ls *.vcf)
+do
+awk '$5 !~ /\./ {print}' ${i} | grep 'PASS' > ${i}.filtered
+done
+
+
+############################################
+#MIC plotting in R
+
+#Penicillin
+dat <- read.csv("~/Desktop/Pen_MIC_plots/2022-Evolution-Pen_MICs.csv", header=TRUE)
+dat <- dat[complete.cases(dat), ]
+Nsub <- subset(dat, dat$Sp == "N.subflava")
+Ncan <- subset(dat, dat$Sp == "N.canis")
+Nelong <- subset(dat, dat$Sp == "N.elongata")
+ggplot(Nsub, aes(x=Day, y=PEN_MIC, group=Strain, colour=Sp)) + geom_point(colour="red") + theme_classic() + geom_line(colour="red") +ylim(0,24)
+ggplot(Nelong, aes(x=Day, y=PEN_MIC, group=Strain, colour=Sp)) + geom_point(colour="darkgreen") + theme_classic() + geom_line(colour="darkgreen") +ylim(0,24)
+ggplot(Ncan, aes(x=Day, y=PEN_MIC, group=Strain, colour=Sp)) + geom_point(colour="blue") + theme_classic() + geom_line(colour="blue") +ylim(0,24)
+
+#all
+ggplot(dat, aes(x=Day, y=PEN_MIC, group=Strain, colour=Sp)) + geom_point() + theme_classic() + geom_line() +ylim(0,24)
+
+
+#Azithromycin
+
+dat <- read.csv("~/Desktop/Pen_MIC_plots/2022-Evolution-Azi_MICs.csv", header=TRUE)
+dat <- dat[complete.cases(dat), ]
+Nsub <- subset(dat, dat$Sp == "N.subflava")
+Ncin <- subset(dat, dat$Sp == "N.cinerea")
+
+ggplot(Nsub, aes(x=Day, y=AZI_MIC, group=Strain, colour=Sp)) + geom_point(colour="red") + theme_classic() + geom_line(colour="red")
+ggplot(Ncin, aes(x=Day, y=AZI_MIC, group=Strain, colour=Sp)) + geom_point(colour="black") + theme_classic() + geom_line(colour="black")
+
+
+#spades assembly
+
+
+[
+{
+orientation: "fr",
+type: "paired-end",
+right reads: [ "/Users/cbwsbi/Desktop/AR-0944/Crista-48-09-144_S13_L001_R1_001.fastq.gz "
+],
+left reads: [
+"/Users/cbwsbi/Desktop/AR-0944/Crista-48-09-144_S13_L001_R2_001.fastq.gz"
+]
+}
+]
+
+
+/Users/cbwsbi/Desktop/software/SPAdes-3.14.1-Darwin/bin/spades.py -t 4 --isolate --dataset ./reads.yaml -o ./AR0944assembly 
+
+############################################
+#Evolutionary data plotting + stats R
+dat <- read.csv("~/Desktop/2022-experimentalevolution/MIC_plots/2022-Evolution-Azi_MICs.csv", head=TRUE)
+
+dat <- na.omit(dat)
+
+AR0944 <- subset(dat, dat$ARname == "AR0944")
+AR0945 <- subset(dat, dat$ARname == "AR0945")
+AR0948 <- subset(dat, dat$ARname == "AR0948")
+AR0953 <- subset(dat, dat$ARname == "AR0953")
+
+library(ggplot2)
+ggplot(AR0944, aes(x=Day, y=AZI_MIC, group=Strain)) +geom_point(colour="black", shape=15)+geom_line(colour="black")+ theme_classic() +ylim(0,256)
+ggplot(AR0945, aes(x=Day, y=AZI_MIC, group=Strain)) +geom_point(colour="darkgreen")+geom_line(colour="darkgreen")+ theme_classic() +ylim(0,256)
+ggplot(AR0948, aes(x=Day, y=AZI_MIC, group=Strain)) +geom_point(colour="blue",shape=17)+geom_line(colour="blue")+ theme_classic() +ylim(0,256)
+ggplot(AR0953, aes(x=Day, y=AZI_MIC, group=Strain)) +geom_point(colour="red", shape=18)+geom_line(colour="red")+ theme_classic() +ylim(0,256)
+
+###
+
+dat2 <- read.csv("~/Desktop/2022-experimentalevolution/MIC_plots/2022-Evolution-Pen_MICs.csv", head=TRUE)
+
+dat2 <- na.omit(dat2)
+
+AR09442 <- subset(dat2, dat2$ARname == "AR0944")
+AR09452 <- subset(dat2, dat2$ARname == "AR0945")
+AR09482 <- subset(dat2, dat2$ARname == "AR0948")
+AR09572 <- subset(dat2, dat2$ARname == "AR0957")
+
+library(ggplot2)
+ggplot(AR09442, aes(x=Day, y=PEN_MIC, group=Strain)) +geom_point(colour="black", shape=15)+geom_line(colour="black")+ theme_classic() +ylim(0,32)
+ggplot(AR09452, aes(x=Day, y=PEN_MIC, group=Strain)) +geom_point(colour="darkgreen")+geom_line(colour="darkgreen")+ theme_classic() +ylim(0,32)
+ggplot(AR09482, aes(x=Day, y=PEN_MIC, group=Strain)) +geom_point(colour="blue",shape=17)+geom_line(colour="blue")+ theme_classic() +ylim(0,32)
+ggplot(AR09572, aes(x=Day, y=PEN_MIC, group=Strain)) +geom_point(colour="red", shape=18)+geom_line(colour="red")+ theme_classic() +ylim(0,32)
+
+###
+
+dat3 <- read.csv("~/Desktop/2022-experimentalevolution/MIC_plots/summary-stats-evolution.csv", head=TRUE)
+
+AZI <-subset(dat3, dat3$Drug == "AZI")
+PEN <-subset(dat3, dat3$Drug == "PEN")
+
+ggplot(dat3, aes(x=Drug, y=Fold.change)) +
+  geom_boxplot()+ theme_classic()
+  
+  wilcox.test(AZI$Fold.change, PEN$Fold.change)
+  
+  ggplot(dat3, aes(x=Drug, y=Day_resistance_threshold)) +
+  geom_boxplot() + theme_classic()
+  
+    wilcox.test(AZI$Day_resistance_threshold, PEN$Day_resistance_threshold)
+  
+    ggplot(dat3, aes(x=Drug, y=Day_double_MIC)) +
+  geom_boxplot() + theme_classic()
+  
+  wilcox.test(AZI$Day_double_MIC, PEN$Day_double_MIC)
+  
+  ggplot(dat3, aes(x=Drug, y=Ancestral.MIC)) +
+  geom_boxplot() + theme_classic()
+  
+    wilcox.test(AZI$Ancestral.MIC, PEN$Ancestral.MIC)
+  
+  ggplot(dat3, aes(x=Drug, y=Final_Record_MIC)) +
+ geom_boxplot() + theme_classic()
+  
+      wilcox.test(AZI$Final_Record_MIC, PEN$Final_Record_MIC)
+  
+  ###
+  ANOVA
+  
+  two.way <- aov(Fold.change ~ Drug * Species, data = dat3)
+  summary(two.way)
+  
+#               Df Sum Sq Mean Sq F value   Pr(>F)    
+#Drug          1  42.47   42.47   21.77 9.71e-05 ***
+#Species       3  63.73   21.24   10.89 0.000105 ***
+#Drug:Species  3 131.91   43.97   22.54 3.67e-07 ***
+#Residuals    24  46.82    1.95                     
+#---
+#Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+tukey.two.way<-TukeyHSD(two.way)
+
+#Tukey multiple comparisons of means
+#    95% family-wise confidence level
+#Fit: aov(formula = Fold.change ~ Drug * Species, data = dat3)
+#$Drug
+#            diff       lwr       upr    p adj
+#PEN-AZI -2.30419 -3.323425 -1.284956 9.71e-05
+#
+#$Species
+#                            diff        lwr        upr     p adj
+#N.cinerea-N.canis      0.8207317 -1.1058654  2.7473288 0.6478260
+#N.elongata-N.canis    -2.9481203 -4.8747174 -1.0215232 0.0016035
+#N.subflava-N.canis    -0.3255089 -2.2521060  1.6010882 0.9657511
+#N.elongata-N.cinerea  -3.7688520 -5.6954491 -1.8422549 0.0000852
+#N.subflava-N.cinerea  -1.1462406 -3.0728377  0.7803565 0.3756076
+#N.subflava-N.elongata  2.6226114  0.6960143  4.5492085 0.0050404
+#
+#$`Drug:Species`
+#                                    diff         lwr        upr     p adj
+#PEN:N.canis-AZI:N.canis       -7.8914634 -11.1625699 -4.6203570 0.0000008
+#AZI:N.cinerea-AZI:N.canis     -4.0424813  -7.3135877 -0.7713748 0.0084122
+#PEN:N.cinerea-AZI:N.canis     -2.2075187  -5.4786252  1.0635877 0.3671378
+#AZI:N.elongata-AZI:N.canis    -7.5424813 -10.8135877 -4.2713748 0.0000018
+#PEN:N.elongata-AZI:N.canis    -6.2452228  -9.5163292 -2.9741163 0.0000375
+#AZI:N.subflava-AZI:N.canis    -2.0424813  -5.3135877  1.2286252 0.4613159
+#PEN:N.subflava-AZI:N.canis    -6.5000000  -9.7711064 -3.2288936 0.0000203
+#AZI:N.cinerea-PEN:N.canis      3.8489822   0.5778757  7.1200886 0.0133502
+#PEN:N.cinerea-PEN:N.canis      5.6839447   2.4128382  8.9550511 0.0001473
+#AZI:N.elongata-PEN:N.canis     0.3489822  -2.9221243  3.6200886 0.9999559
+#PEN:N.elongata-PEN:N.canis     1.6462406  -1.6248658  4.9173471 0.7070757
+#AZI:N.subflava-PEN:N.canis     5.8489822   2.5778757  9.1200886 0.0000983
+#PEN:N.subflava-PEN:N.canis     1.3914634  -1.8796430  4.6625699 0.8444889
+#PEN:N.cinerea-AZI:N.cinerea    1.8349625  -1.4361439  5.1060689 0.5899972
+#AZI:N.elongata-AZI:N.cinerea  -3.5000000  -6.7711064 -0.2288936 0.0300176
+#PEN:N.elongata-AZI:N.cinerea  -2.2027415  -5.4738480  1.0683649 0.3697139
+#AZI:N.subflava-AZI:N.cinerea   2.0000000  -1.2711064  5.2711064 0.4870153
+#PEN:N.subflava-AZI:N.cinerea  -2.4575187  -5.7286252  0.8135877 0.2472779
+#AZI:N.elongata-PEN:N.cinerea  -5.3349625  -8.6060689 -2.0638561 0.0003488
+#PEN:N.elongata-PEN:N.cinerea  -4.0377040  -7.3088105 -0.7665976 0.0085094
+#AZI:N.subflava-PEN:N.cinerea   0.1650375  -3.1060689  3.4361439 0.9999997
+#PEN:N.subflava-PEN:N.cinerea  -4.2924813  -7.5635877 -1.0213748 0.0045885
+#PEN:N.elongata-AZI:N.elongata  1.2972585  -1.9738480  4.5683649 0.8849077
+#AZI:N.subflava-AZI:N.elongata  5.5000000   2.2288936  8.7711064 0.0002319
+#PEN:N.subflava-AZI:N.elongata  1.0424813  -2.2286252  4.3135877 0.9600590
+#AZI:N.subflava-PEN:N.elongata  4.2027415   0.9316351  7.4738480 0.0057096
+#PEN:N.subflava-PEN:N.elongata -0.2547772  -3.5258837  3.0163292 0.9999949
+#PEN:N.subflava-AZI:N.subflava -4.4575187  -7.7286252 -1.1864123 0.0030623
+
+two.way.plot <- ggplot(dat3, aes(x = Species, y = Fold.change, group= Drug)) +  geom_point(cex = 1.5, pch = 1.0,position = position_jitter(w = 0.1, h = 0)) + theme_classic() + ylim(-2,12)
+two.way.plot + facet_wrap(~ Drug)
+
+two.way <- aov(Final_Record_MIC ~ Drug * Species, data = dat3)
+  summary(two.way)
+  
+#             Df Sum Sq Mean Sq F value   Pr(>F)    
+#Drug          1  61567   61567  16.117 0.000508 ***
+#Species       3  36085   12028   3.149 0.043519 *  
+#Drug:Species  3  29537    9846   2.577 0.077289 .  
+#Residuals    24  91680    3820                     
+#---
+#Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+tukey.two.way<-TukeyHSD(two.way)
+
+#  Tukey multiple comparisons of means
+#    95% family-wise confidence level
+#
+#Fit: aov(formula = Final_Record_MIC ~ Drug * Species, data = dat3)
+
+#$Drug
+#             diff       lwr       upr     p adj
+#PEN-AZI -87.72625 -132.8261 -42.62641 0.0005078
+#
+#$Species
+#                           diff         lwr        upr     p adj
+#N.cinerea-N.canis      49.88250  -35.366992 135.131992 0.3899113
+#N.elongata-N.canis    -31.03125 -116.280742  54.218242 0.7484938
+#N.subflava-N.canis     45.91375  -39.335742 131.163242 0.4612357
+#N.elongata-N.cinerea  -80.91375 -166.163242   4.335742 0.0671356
+#N.subflava-N.cinerea   -3.96875  -89.218242  81.280742 0.9992212
+#N.subflava-N.elongata  76.94500   -8.304492 162.194492 0.0871773
+#
+#$`Drug:Species`
+#                                       diff         lwr        upr     p adj
+#PEN:N.canis-AZI:N.canis       -6.376500e+01 -208.507336  80.977336 0.8206663
+#AZI:N.cinerea-AZI:N.canis      8.800000e+01  -56.742336 232.742336 0.4938929
+#PEN:N.cinerea-AZI:N.canis     -5.200000e+01 -196.742336  92.742336 0.9271575
+#AZI:N.elongata-AZI:N.canis    -6.331250e+01 -208.054836  81.429836 0.8257135
+#PEN:N.elongata-AZI:N.canis    -6.251500e+01 -207.257336  82.227336 0.8344401
+#AZI:N.subflava-AZI:N.canis     8.800000e+01  -56.742336 232.742336 0.4938929
+#PEN:N.subflava-AZI:N.canis    -5.993750e+01 -204.679836  84.804836 0.8611036
+#AZI:N.cinerea-PEN:N.canis      1.517650e+02    7.022664 296.507336 0.0351734
+#PEN:N.cinerea-PEN:N.canis      1.176500e+01 -132.977336 156.507336 0.9999931
+#AZI:N.elongata-PEN:N.canis     4.525000e-01 -144.289836 145.194836 1.0000000
+#PEN:N.elongata-PEN:N.canis     1.250000e+00 -143.492336 145.992336 1.0000000
+#AZI:N.subflava-PEN:N.canis     1.517650e+02    7.022664 296.507336 0.0351734
+#PEN:N.subflava-PEN:N.canis     3.827500e+00 -140.914836 148.569836 1.0000000
+#PEN:N.cinerea-AZI:N.cinerea   -1.400000e+02 -284.742336   4.742336 0.0630341
+#AZI:N.elongata-AZI:N.cinerea  -1.513125e+02 -296.054836  -6.570164 0.0359900
+#PEN:N.elongata-AZI:N.cinerea  -1.505150e+02 -295.257336  -5.772664 0.0374722
+#AZI:N.subflava-AZI:N.cinerea   5.684342e-14 -144.742336 144.742336 1.0000000
+#PEN:N.subflava-AZI:N.cinerea  -1.479375e+02 -292.679836  -3.195164 0.0426576
+#AZI:N.elongata-PEN:N.cinerea  -1.131250e+01 -156.054836 133.429836 0.9999947
+#PEN:N.elongata-PEN:N.cinerea  -1.051500e+01 -155.257336 134.227336 0.9999968
+#AZI:N.subflava-PEN:N.cinerea   1.400000e+02   -4.742336 284.742336 0.0630341
+#PEN:N.subflava-PEN:N.cinerea  -7.937500e+00 -152.679836 136.804836 0.9999995
+#PEN:N.elongata-AZI:N.elongata  7.975000e-01 -143.944836 145.539836 1.0000000
+#AZI:N.subflava-AZI:N.elongata  1.513125e+02    6.570164 296.054836 0.0359900
+#PEN:N.subflava-AZI:N.elongata  3.375000e+00 -141.367336 148.117336 1.0000000
+#AZI:N.subflava-PEN:N.elongata  1.505150e+02    5.772664 295.257336 0.0374722
+#PEN:N.subflava-PEN:N.elongata  2.577500e+00 -142.164836 147.319836 1.0000000
+#PEN:N.subflava-AZI:N.subflava -1.479375e+02 -292.679836  -3.195164 0.0426576
+  
+two.way.plot <- ggplot(dat3, aes(x = Species, y = Final_Record_MIC, group= Drug)) +  geom_point(cex = 1.5, pch = 1.0,position = position_jitter(w = 0.1, h = 0)) + theme_classic() +ylim(0,300)
+two.way.plot + facet_wrap(~ Drug)
+#Repeat with different scale
+two.way.plot <- ggplot(dat3, aes(x = Species, y = Final_Record_MIC, group= Drug)) +  geom_point(cex = 1.5, pch = 1.0,position = position_jitter(w = 0.1, h = 0)) + theme_classic() +ylim(0,32)
+two.way.plot + facet_wrap(~ Drug)
+
+
+#Number mutations
+dat <- read.csv("~/Desktop/NoMutations.csv", header=TRUE)
+
+two.way <- aov(NumberMutations ~ Drug * Strain, data = dat)
+summary(two.way)
+
+#Drug         2    756   377.8   1.455 0.249413    
+#Strain       3   5646  1882.0   7.247 0.000851 ***
+#Drug:Strain  6   3676   612.6   2.359 0.055049 .  
+#Residuals   30   7790   259.7                     
+#---
+#Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+tukey.two.way<-TukeyHSD(two.way)
+
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = NumberMutations ~ Drug * Strain, data = dat)
+
+$Drug
+             diff        lwr      upr     p adj
+C-AZI   -4.061538 -19.115338 10.99226 0.7852809
+PEN-AZI  6.109890  -9.191491 21.41127 0.5922162
+PEN-C   10.171429  -4.591543 24.93440 0.2223220
+
+$Strain
+                          diff        lwr        upr     p adj
+Ncinerea-Ncanis       9.830623 -10.302073  29.963319 0.5530716
+Nelongata-Ncanis    -23.268278 -43.400975  -3.135582 0.0186197
+Nsubflava-Ncanis      2.266625 -15.875494  20.408743 0.9862359
+Nelongata-Ncinerea  -33.098901 -53.754611 -12.443191 0.0007793
+Nsubflava-Ncinerea   -7.563998 -26.284825  11.156829 0.6930787
+Nsubflava-Nelongata  25.534903   6.814076  44.255731 0.0044453
+
+$`Drug:Strain`
+                                   diff         lwr        upr     p adj
+C:Ncanis-AZI:Ncanis          -7.8333333 -51.3546938 35.6880272 0.9999473
+PEN:Ncanis-AZI:Ncanis        30.1666667 -13.3546938 73.6880272 0.4053701
+AZI:Ncinerea-AZI:Ncanis       9.5000000 -39.8485842 58.8485842 0.9998980
+C:Ncinerea-AZI:Ncanis        16.5000000 -27.0213605 60.0213605 0.9661668
+PEN:Ncinerea-AZI:Ncanis      21.7500000 -18.5429503 62.0429503 0.7451160
+AZI:Nelongata-AZI:Ncanis    -20.5000000 -64.0213605 23.0213605 0.8696023
+C:Nelongata-AZI:Ncanis       -8.1666667 -51.6880272 35.3546938 0.9999206
+PEN:Nelongata-AZI:Ncanis    -20.8333333 -64.3546938 22.6880272 0.8577773
+AZI:Nsubflava-AZI:Ncanis     23.5000000 -16.7929503 63.7929503 0.6506356
+C:Nsubflava-AZI:Ncanis       -0.5000000 -37.2822630 36.2822630 1.0000000
+PEN:Nsubflava-AZI:Ncanis      6.5000000 -33.7929503 46.7929503 0.9999824
+PEN:Ncanis-C:Ncanis          38.0000000  -8.5262914 84.5262914 0.1956550
+AZI:Ncinerea-C:Ncanis        17.3333333 -34.6846418 69.3513085 0.9868579
+C:Ncinerea-C:Ncanis          24.3333333 -22.1929581 70.8596248 0.7789759
+PEN:Ncinerea-C:Ncanis        29.5833333 -13.9380272 73.1046938 0.4335477
+AZI:Nelongata-C:Ncanis      -12.6666667 -59.1929581 33.8596248 0.9974896
+C:Nelongata-C:Ncanis         -0.3333333 -46.8596248 46.1929581 1.0000000
+PEN:Nelongata-C:Ncanis      -13.0000000 -59.5262914 33.5262914 0.9968617
+AZI:Nsubflava-C:Ncanis       31.3333333 -12.1880272 74.8546938 0.3517863
+C:Nsubflava-C:Ncanis          7.3333333 -32.9596170 47.6262836 0.9999412
+PEN:Nsubflava-C:Ncanis       14.3333333 -29.1880272 57.8546938 0.9879940
+AZI:Ncinerea-PEN:Ncanis     -20.6666667 -72.6846418 31.3513085 0.9534954
+C:Ncinerea-PEN:Ncanis       -13.6666667 -60.1929581 32.8596248 0.9952162
+PEN:Ncinerea-PEN:Ncanis      -8.4166667 -51.9380272 35.1046938 0.9998934
+AZI:Nelongata-PEN:Ncanis    -50.6666667 -97.1929581 -4.1403752 0.0236568
+C:Nelongata-PEN:Ncanis      -38.3333333 -84.8596248  8.1929581 0.1865502
+PEN:Nelongata-PEN:Ncanis    -51.0000000 -97.5262914 -4.4737086 0.0222329
+AZI:Nsubflava-PEN:Ncanis     -6.6666667 -50.1880272 36.8546938 0.9999896
+C:Nsubflava-PEN:Ncanis      -30.6666667 -70.9596170  9.6262836 0.2779078
+PEN:Nsubflava-PEN:Ncanis    -23.6666667 -67.1880272 19.8546938 0.7367934
+C:Ncinerea-AZI:Ncinerea       7.0000000 -45.0179752 59.0179752 0.9999972
+PEN:Ncinerea-AZI:Ncinerea    12.2500000 -37.0985842 61.5985842 0.9988889
+AZI:Nelongata-AZI:Ncinerea  -30.0000000 -82.0179752 22.0179752 0.6652468
+C:Nelongata-AZI:Ncinerea    -17.6666667 -69.6846418 34.3513085 0.9847989
+PEN:Nelongata-AZI:Ncinerea  -30.3333333 -82.3513085 21.6846418 0.6508539
+AZI:Nsubflava-AZI:Ncinerea   14.0000000 -35.3485842 63.3485842 0.9964281
+C:Nsubflava-AZI:Ncinerea    -10.0000000 -56.5262914 36.5262914 0.9997063
+PEN:Nsubflava-AZI:Ncinerea   -3.0000000 -52.3485842 46.3485842 1.0000000
+PEN:Ncinerea-C:Ncinerea       5.2500000 -38.2713605 48.7713605 0.9999991
+AZI:Nelongata-C:Ncinerea    -37.0000000 -83.5262914  9.5262914 0.2249813
+C:Nelongata-C:Ncinerea      -24.6666667 -71.1929581 21.8596248 0.7647618
+PEN:Nelongata-C:Ncinerea    -37.3333333 -83.8596248  9.1929581 0.2148673
+AZI:Nsubflava-C:Ncinerea      7.0000000 -36.5213605 50.5213605 0.9999829
+C:Nsubflava-C:Ncinerea      -17.0000000 -57.2929503 23.2929503 0.9315050
+PEN:Nsubflava-C:Ncinerea    -10.0000000 -53.5213605 33.5213605 0.9994514
+AZI:Nelongata-PEN:Ncinerea  -42.2500000 -85.7713605  1.2713605 0.0632602
+C:Nelongata-PEN:Ncinerea    -29.9166667 -73.4380272 13.6046938 0.4173428
+PEN:Nelongata-PEN:Ncinerea  -42.5833333 -86.1046938  0.9380272 0.0595096
+AZI:Nsubflava-PEN:Ncinerea    1.7500000 -38.5429503 42.0429503 1.0000000
+C:Nsubflava-PEN:Ncinerea    -22.2500000 -59.0322630 14.5322630 0.6013158
+PEN:Nsubflava-PEN:Ncinerea  -15.2500000 -55.5429503 25.0429503 0.9665653
+C:Nelongata-AZI:Nelongata    12.3333333 -34.1929581 58.8596248 0.9980094
+PEN:Nelongata-AZI:Nelongata  -0.3333333 -46.8596248 46.1929581 1.0000000
+AZI:Nsubflava-AZI:Nelongata  44.0000000   0.4786395 87.5213605 0.0456965
+C:Nsubflava-AZI:Nelongata    20.0000000 -20.2929503 60.2929503 0.8283807
+PEN:Nsubflava-AZI:Nelongata  27.0000000 -16.5213605 70.5213605 0.5658843
+PEN:Nelongata-C:Nelongata   -12.6666667 -59.1929581 33.8596248 0.9974896
+AZI:Nsubflava-C:Nelongata    31.6666667 -11.8546938 75.1880272 0.3372295
+C:Nsubflava-C:Nelongata       7.6666667 -32.6262836 47.9596170 0.9999090
+PEN:Nsubflava-C:Nelongata    14.6666667 -28.8546938 58.1880272 0.9856711
+AZI:Nsubflava-PEN:Nelongata  44.3333333   0.8119728 87.8546938 0.0429011
+C:Nsubflava-PEN:Nelongata    20.3333333 -19.9596170 60.6262836 0.8136582
+PEN:Nsubflava-PEN:Nelongata  27.3333333 -16.1880272 70.8546938 0.5483805
+C:Nsubflava-AZI:Nsubflava   -24.0000000 -60.7822630 12.7822630 0.4931277
+PEN:Nsubflava-AZI:Nsubflava -17.0000000 -57.2929503 23.2929503 0.9315050
+PEN:Nsubflava-C:Nsubflava     7.0000000 -29.7822630 43.7822630 0.9999089
+
+ggplot(dat, aes(x=StrainDrug, y=NumberMutations)) + geom_boxplot() + theme_classic() + scale_x_discrete(limits=c("NcanisC", "NcanisAZI", "NcanisPEN", "NcinereaC", "NcinereaAZI", "NcinereaPEN", "NelongataC", "NelongataAZI", "NelongataPEN", "NsubflavaC", "NsubflavaAZI", "NsubflavaPEN"))+ylim(0,150)
+
+
+#######################################
+#Annotation
+#see additional scripts in this directory
